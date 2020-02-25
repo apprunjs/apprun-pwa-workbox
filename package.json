@@ -6,21 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development",
-    "build": "webpack -p --mode production"
+    "build": "webpack -p --mode production && npm run workbox",
+    "workbox": "workbox generateSW"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "apprun": "^2.23.1",
-    "clean-webpack-plugin": "^3.0.0",
-    "html-webpack-plugin": "^3.2.0",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^6.2.1",
     "typescript": "^3.8.2",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3",
-    "workbox-webpack-plugin": "^5.0.0"
+    "workbox-cli": "^5.0.0"
   }
 }

@@ -1,6 +1,7 @@
 module.exports = {
   globDirectory: "./",
   globPatterns: [
+    "manifest.json",
     "index.html",
     "dist/app.js"
   ],
@@ -13,6 +14,15 @@ module.exports = {
   swDest: "./sw.js",
   clientsClaim: true,
   skipWaiting: true,
-  sourcemap: false
-
-}
+  sourcemap: false,
+  runtimeCaching: [
+    {
+      urlPattern: new RegExp("https://unpkg.com"),
+      handler: "StaleWhileRevalidate"
+    },
+    {
+      urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+      handler: 'CacheFirst'
+    }
+  ]
+};

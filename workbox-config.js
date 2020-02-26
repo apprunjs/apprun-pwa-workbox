@@ -9,7 +9,7 @@ module.exports = {
     "node_modules/**",
     "jest.config.js",
     "webpack.config.js",
-    "workbox-*.js"
+    "workbox-config.js"
   ],
   swDest: "./sw.js",
   clientsClaim: true,

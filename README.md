@@ -1,4 +1,4 @@
-## AppRun Template for Web Components
+## AppRun Template for PWA Apps using Workbox
 
 This app uses the service worker code from [Workbox](https://developers.google.com/web/tools/workbox).
 
